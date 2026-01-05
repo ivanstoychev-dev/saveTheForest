@@ -1,13 +1,8 @@
 "use client";
 import ButtonLink from "@client/components/basic/ButtonLink";
-import { useWindowSize } from "@client/utils/hooks/useWindowWidth";
 import Title from "../client/components/basic/Title";
 
 function MainPage() {
-  const { viewport } = useWindowSize();
-
-  console.log(viewport);
-
   return (
     <div
       className="py-10 min-h-screen xl:py-0 xl:pt-5 h-screen w-full bg-center bg-no-repeat bg-cover lg:bg-[url('../client/assets/images/bg.jpg')] bg-[url('../client/assets/images/bg-mobile.jpg')]
