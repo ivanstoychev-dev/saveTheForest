@@ -1,0 +1,19 @@
+{
+  // Format on save
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSave": true,
+
+  // Prettier as the default formatter for JS/TS
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Headwind settings
+  "headwind.runOnSave": true,
+  "headwind.classRegex": ".*"
+}

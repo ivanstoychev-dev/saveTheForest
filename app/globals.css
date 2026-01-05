@@ -3,13 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sung: "Yeon Sung", cursive;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-darkGray: #2b303b;
+  --color-darkGray100: #131519;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-montserrat: var(--font-montserrat);
+  --font-sung: var(--font-sung);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +28,111 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.cst-text-shadow {
+  text-shadow: 2px 2px 0px black;
+}
+
+@layer utilities {
+  @keyframes slide-x {
+    0% {
+      transform: translateX(-100vw);
+    }
+    5% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .animate-slide-x {
+    animation: slide-x 1s ease-out;
+  }
+
+  @keyframes slide-right-to-left {
+    0% {
+      transform: translateX(100vw);
+    }
+    5% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .animate-slide-right-to-left {
+    animation: slide-right-to-left 1s ease-out;
+  }
+}
+
+/* --- RAIN --- */
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  transform: rotate(15deg);
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 2px;
+  height: 60px;
+  background: whitesmoke;
+  animation: rainFall linear infinite;
+}
+
+@keyframes rainFall {
+  0% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
+
+/* --- LIGHTNING FLASH --- */
+.lightning {
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  animation: lightningFlash 7s infinite;
+}
+
+@keyframes lightningFlash {
+  0%,
+  92%,
+  100% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 0.4;
+  }
+  94% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  96% {
+    opacity: 0;
+  }
 }
