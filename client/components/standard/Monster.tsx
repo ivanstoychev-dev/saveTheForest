@@ -15,9 +15,9 @@ function Monster() {
         gains percentages rage based on the damage he deals every round. The
         more damage he deals the faster his rage bar fills.
       </p>
-      <div className="tutorial-monster-img">
-        <Image height={500} width={500} src={MonsterImage} alt="monster" />
-        <Image height={500} width={500} src={MonsterRagedImage} alt="monster" />
+      <div className="flex justify-center gap-20">
+        <Image height={450} width={450} src={MonsterImage} alt="monster" />
+        <Image height={450} width={450} src={MonsterRagedImage} alt="monster" />
       </div>
     </div>
   );

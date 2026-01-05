@@ -96,7 +96,11 @@ function CharacterBoxDesktop({
         </h1>
 
         <div className="w-full flex-col items-center flex gap-2 relative  px-4 pt-6">
-          <Image className="w-[140px]" alt="character image" src={image} />
+          <Image
+            className="xl:w-full w-[140px]"
+            alt="character image"
+            src={image}
+          />
 
           {spells.length > 0 && (
             <div className="flex gap-6 w-full justify-between bg-green-700 border-green-400 border p-1.5 rounded-md items-center">

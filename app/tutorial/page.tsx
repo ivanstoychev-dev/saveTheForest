@@ -6,7 +6,7 @@ import TutorialFragmentRight from "@images/tutorialTitleRight.png";
 import { ArrowUpIcon } from "lucide-react";
 import Image from "next/image";
 import { dataTutorial } from "../../client/assets/data/DataTutorial";
-import Title from "../../client/components/basic/title/Title";
+import Title from "../../client/components/basic/Title";
 import Hero from "../../client/components/standard/Hero";
 import Monster from "../../client/components/standard/Monster";
 
@@ -19,9 +19,9 @@ function Tutorial() {
           <Image
             alt="left title fragment"
             width={150}
-            height={100}
+            height={50}
             src={TutorialFragmentLeft}
-            className="md:h-[150px] h-[22px] w-auto"
+            className="md:h-[50px] h-[22px] w-auto"
           />
           <h2 className="flex text-4xl items-center justify-center relative text-center text-white font-sung lg:text-6xl">
             TUTORIAL
@@ -30,7 +30,7 @@ function Tutorial() {
             alt="right title fragment"
             width={150}
             height={100}
-            className="md:h-[150px] h-[22px] w-auto"
+            className="md:h-[50px] h-[22px] w-auto"
             src={TutorialFragmentRight}
           />
         </div>
@@ -62,7 +62,7 @@ function Tutorial() {
         ))}
         <Monster />
 
-        <div className="xl:absolute fixed xl:-right-[30px] bottom-5 gap-5   justify-center flex xl:flex-col">
+        <div className="xl:absolute fixed xl:-right-[30px] xl:h-fit xl:top-[50px] bottom-5 xl:gap-0 gap-5   justify-center flex xl:flex-col">
           <div className="relative flex flex-col items-end hover:translate-x-10 transition-all duration-500">
             <ButtonLink className="text-lg" href="/">
               Home
@@ -78,7 +78,7 @@ function Tutorial() {
         </div>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="rounded-full xl:block hidden place-self-end animate-bounce cursor-pointer w-16 h-16 text-4xl flex items-center justify-center bg-green-600"
+          className="rounded-full xl:flex hidden place-self-end animate-bounce cursor-pointer w-16 h-16 text-4xl items-center justify-center bg-green-600"
         >
           <ArrowUpIcon className="w-10 h-auto" />
         </button>
